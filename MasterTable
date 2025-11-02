@@ -1,0 +1,45 @@
+USE DATABASE RETAIL_POC;
+USE SCHEMA RAW;
+
+------------------------------------------------------------
+-- 1️⃣ 商品マスタ（products.csv）
+------------------------------------------------------------
+CREATE OR REPLACE TABLE PRODUCTS_RAW (
+    PRODUCT_ID      NUMBER,
+    PRODUCT_NAME    STRING,
+    CATEGORY        STRING,
+    UNIT_PRICE      NUMBER
+);
+
+------------------------------------------------------------
+-- 2️⃣ 顧客マスタ（customers.csv）
+------------------------------------------------------------
+CREATE OR REPLACE TABLE CUSTOMERS_RAW (
+    CUSTOMER_ID     NUMBER,
+    CUSTOMER_NAME   STRING,
+    GENDER          STRING,
+    AGE             NUMBER,
+    REGION          STRING
+);
+
+------------------------------------------------------------
+-- 3️⃣ 店舗マスタ（stores.csv）
+------------------------------------------------------------
+CREATE OR REPLACE TABLE STORES_RAW (
+    STORE_ID        NUMBER,
+    STORE_NAME      STRING,
+    AREA            STRING,
+    MANAGER         STRING
+);
+
+------------------------------------------------------------
+-- 4️⃣ 日付ディメンション（dates.csv）
+------------------------------------------------------------
+CREATE OR REPLACE TABLE DATES_RAW (
+    DATE_ID         NUMBER,
+    DATE            DATE,
+    YEAR            NUMBER,
+    MONTH           NUMBER,
+    DAY             NUMBER,
+    WEEKDAY         STRING
+);
